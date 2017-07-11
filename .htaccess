@@ -7,7 +7,7 @@ Options All -Indexes
 ServerSignature Off
 IndexIgnore *
 
-#Reroute everything through index.php?page={PAGE}
+#Reroute everything through index.php?_page={PAGE}
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?page=$1 [L]
+RewriteRule ^(.*)$ index.php?_page=$1 [L]

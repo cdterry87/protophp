@@ -1,1 +1,1 @@
-<h2>This is my home page</h2>
+<h2 class="center">This is my home page</h2>
