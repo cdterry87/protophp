@@ -19,15 +19,18 @@ class System{
 	/* --------------------------------------------------------------------------------
 	 * Create an anchor tag
 	 * -------------------------------------------------------------------------------- */
-	public function anchor(){
+	function anchor($path, $name='', $class=''){
+		if(trim($class)!='') $class=' class="'.$class.'"';
 		
+		return '<a href="'.BASE_URL.$path.'" '.$class.'>'.$name.'</a>';
 	}
 	
 	/* --------------------------------------------------------------------------------
 	 * Redirect to the specified location
 	 * -------------------------------------------------------------------------------- */
-	public function redirect(){
-		
+	public function redirect($path){
+		header('location: '.BASE_URL.$path, true);
+		exit;
 	}
 	
 }
