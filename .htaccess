@@ -1,0 +1,13 @@
+#Turn mod_rewrite on and set the base URL
+RewriteEngine On
+RewriteBase /protophp/
+
+#Protect my directories from unauthorized access
+Options All -Indexes
+ServerSignature Off
+IndexIgnore *
+
+#Reroute everything through index.php?page={PAGE}
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?page=$1 [L]
