@@ -85,10 +85,8 @@ class System{
 	/* --------------------------------------------------------------------------------
 	 * Create an anchor tag
 	 * -------------------------------------------------------------------------------- */
-	function anchor($path='', $name='', $class=''){
-		if(trim($class)!='') $class=' class="'.$class.'"';
-		
-		return '<a href="'.BASE_URL.$path.'" '.$class.'>'.$name.'</a>';
+	function anchor($path='', $name='', $attributes=''){
+		return '<a href="'.BASE_URL.$path.'" '.$attributes.'>'.$name.'</a>';
 	}
 	
 	/* --------------------------------------------------------------------------------
